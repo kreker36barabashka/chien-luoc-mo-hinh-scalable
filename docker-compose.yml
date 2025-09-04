@@ -6,6 +6,7 @@ services:
       - '3000:3000'
     depends_on:
       - mongo
+    restart: always
   mongo:
     image: mongo
     ports:
@@ -16,6 +17,7 @@ services:
       - '5000:5000'
     depends_on:
       - postgres
+    restart: always
   postgres:
     image: postgres
     ports:
